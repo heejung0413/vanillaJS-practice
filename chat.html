@@ -10,33 +10,49 @@
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
   </head>
   <script>
+    document
+      .getElementById("chat-input-value")
+      .addEventListener("keypress", function (event) {
+        if (event.key === "Enter") {
+          input();
+        }
+      });
+
     function input() {
       let inputValue = document.getElementById("chat-input-value").value;
 
-      let itemContainer = document.createElement("div");
-      itemContainer.setAttribute("class", "conversation-right-container");
+      if (inputValue !== "") {
+        //conversation-right-container
+        let itemContainer = document.createElement("div");
+        itemContainer.setAttribute("class", "conversation-right-container");
 
-      let chatItem = document.createElement("div");
-      chatItem.setAttribute("class", "speech-bubble");
-      chatItem.textContent = inputValue;
+        let chatItem = document.createElement("div");
+        chatItem.setAttribute("class", "speech-bubble");
+        chatItem.textContent = inputValue;
 
-      let image = document.createElement("img");
-      image.setAttribute("class", "profile-image");
-      image.setAttribute("src", "photo/kakao.jpeg");
+        let image = document.createElement("img");
+        image.setAttribute("class", "profile-image");
+        image.setAttribute("src", "photo/kakao.jpeg");
 
-      let removeButton = document.createElement("button");
-      removeButton.setAttribute("class", "remove");
-      removeButton.textContent = "삭제";
-      removeButton.onclick = function () {
-        itemContainer.remove();
-      };
+        let removeButton = document.createElement("button");
+        removeButton.setAttribute("class", "remove");
+        removeButton.textContent = "삭제";
 
-      itemContainer.appendChild(chatItem);
-      itemContainer.appendChild(image);
-      itemContainer.appendChild(removeButton);
+        removeButton.onclick = function () {
+          itemContainer.remove();
+        };
 
-      let container = document.getElementsByClassName("section")[0];
-      container.appendChild(itemContainer);
+        itemContainer.appendChild(chatItem);
+        itemContainer.appendChild(image);
+        itemContainer.appendChild(removeButton);
+
+        //section
+        let container = document.getElementsByClassName("section")[0];
+        container.appendChild(itemContainer);
+
+        //reset
+        document.getElementById("chat-input-value").value = "";
+      }
     }
   </script>
   <body>
@@ -45,10 +61,11 @@
         <div>12:43</div>
         <i class="fas fa-wifi"></i>
       </header>
+
       <nav>
         <div class="nav-left">< 156</div>
         <p>혜준</p>
-        <div></div>
+        <div>알림</div>
       </nav>
       <section class="section">
         <div class="conversation-left-container">

@@ -1,4 +1,5 @@
 main {
+  max-width: 300px;
   width: 80%;
   margin: 0 auto;
   border: black solid 1px;
@@ -16,9 +17,18 @@ header {
 nav {
   display: flex;
   justify-content: space-between;
+  height: 80px;
+}
+
+nav p {
+  margin: auto 0;
 }
 
 .nav-left {
+  margin: auto 0;
+}
+
+nav div {
   margin: auto 0;
 }
 
@@ -61,6 +71,7 @@ nav p {
   display: flex;
   justify-content: right;
   animation: bubble 1s linear;
+  margin: 10px 0;
 }
 
 section {
