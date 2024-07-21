@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="signupstyles.css" />
+  </head>
+  <script>
+    function todoSave() {
+      let content = document.getElementById("todo-content-text").value;
+
+      if ((todoText = "")) {
+        return;
+      }
+
+      let todoItem = document.createElement("div");
+      todoItem.setAttribute("id", "card-item");
+      todoItem.textContent = content;
+
+      let remove = document.createElement("button");
+      remove.setAttribute("class", "card-item-remove");
+      remove.textContent = "remove";
+      remove.onclick = function () {
+        todoItem.remove();
+        remove.remove();
+      };
+
+      let saveContainer = document.getElementById("save-container");
+      saveContainer.appendChild(todoItem);
+      saveContainer.appendChild(remove);
+    }
+  </script>
+  <body>
+    <div class="container">
+      <h1>todo-list</h1>
+      <div class="content-container">
+        <p>TODO-LIST</p>
+        <div class="input-container">
+          <input type="text" id="todo-content-text" />
+          <button onclick="todoSave()">입력</button>
+        </div>
+        <div id="save-container"></div>
+      </div>
+    </div>
+  </body>
+</html>

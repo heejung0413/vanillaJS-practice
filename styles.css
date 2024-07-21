@@ -1,0 +1,181 @@
+.Container {
+  width: 90%;
+  margin: 0 auto;
+  height: 800px;
+}
+
+nav {
+  width: 100%;
+  text-align: center;
+  background: linear-gradient(180deg, yellow, white);
+}
+
+h1 {
+  text-align: left;
+  color: #8a6aff;
+}
+
+.id-container {
+  /* display: grid; */
+  margin: 0 200px;
+  justify-content: center;
+  grid-template-columns: repeat(auto-fill, 1fr);
+}
+
+@media screen and (max-width: 830px) {
+  .id-container {
+    margin: 0 auto;
+  }
+}
+
+.id-container input {
+  width: 100%;
+  margin: 10px auto;
+  height: 30px;
+  /* background-color: gainsboro; */
+  border: white solid 1px;
+  border-radius: 10px;
+  border-bottom: gainsboro solid 1px;
+}
+
+.id-box {
+  margin: 0 auto;
+}
+
+.id-box a {
+  font-weight: 500;
+  min-width: 300px;
+}
+
+.login-button {
+  width: 100%;
+  height: 50px;
+  background-color: #8a6aff;
+  border: white solid 1px;
+  color: white;
+  border-radius: 10px;
+}
+
+.login-button:hover {
+  transition-property: all;
+  transition-duration: 0.5s;
+  background-color: #6847ff;
+  cursor: pointer;
+}
+
+.signup-container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  text-align: center;
+  margin: 10px auto;
+  text-decoration: none;
+}
+
+.signup-container a {
+  text-decoration: none;
+  color: black;
+}
+
+@media screen and (max-width: 478px) {
+  .signup-container {
+    grid-template-columns: repeat(1, 1fr);
+  }
+  .signup-container a {
+    margin: 10px auto;
+  }
+}
+
+.signup-container a:hover {
+  cursor: pointer;
+}
+
+.logo-container {
+  height: 100px;
+  font-weight: 900;
+  font-size: 20px;
+  text-align: left;
+  padding: 10px;
+}
+
+.button-container {
+  display: flex;
+}
+
+.button-container h1 {
+  width: 100%;
+  text-align: center;
+  border: #6847ff solid 2px;
+  margin: 0 2px;
+  border-radius: 10px;
+}
+
+.button-container h1:hover {
+  background-color: #8a6aff;
+  color: white;
+  /* transition-property: all; */
+  transition-duration: 0.5s;
+  cursor: pointer;
+}
+
+.line {
+  text-align: center;
+  margin: 20px auto;
+}
+
+.facebook {
+  width: 100%;
+  border-radius: 10px;
+  background-color: #377afe;
+  padding: auto;
+  text-align: center;
+  height: 50px;
+  border: white solid 1px;
+  color: white;
+}
+
+.facebook:hover {
+  transition-duration: 0.8s;
+  cursor: pointer;
+  background-color: #0059e9;
+  color: white;
+}
+
+.kakao {
+  width: 100%;
+  border-radius: 10px;
+  background-color: #f0d63c;
+  padding: auto;
+  text-align: center;
+  height: 50px;
+  border: white solid 1px;
+  color: white;
+}
+
+.kakao:hover {
+  transition-duration: 0.8s;
+  cursor: pointer;
+  background-color: #eca829;
+  color: white;
+}
+
+.show-button {
+  height: 80%;
+  margin: auto 0;
+  background-color: white;
+  border: gainsboro solid 1px;
+  border-radius: 5px;
+}
+
+.show-button:hover {
+  background-color: gainsboro;
+}
+
+.open-button {
+  width: 100%;
+  height: 30px;
+  border: gainsboro solid 1px;
+}
+
+.line-container {
+  display: flex;
+}

@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="chat.styles.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+  </head>
+  <script>
+    function input() {
+      let inputValue = document.getElementById("chat-input-value").value;
+
+      let itemContainer = document.createElement("div");
+      itemContainer.setAttribute("class", "conversation-right-container");
+
+      let chatItem = document.createElement("div");
+      chatItem.setAttribute("class", "speech-bubble");
+      chatItem.textContent = inputValue;
+
+      let image = document.createElement("img");
+      image.setAttribute("class", "profile-image");
+      image.setAttribute("src", "photo/kakao.jpeg");
+
+      let removeButton = document.createElement("button");
+      removeButton.setAttribute("class", "remove");
+      removeButton.textContent = "삭제";
+      removeButton.onclick = function () {
+        itemContainer.remove();
+      };
+
+      itemContainer.appendChild(chatItem);
+      itemContainer.appendChild(image);
+      itemContainer.appendChild(removeButton);
+
+      let container = document.getElementsByClassName("section")[0];
+      container.appendChild(itemContainer);
+    }
+  </script>
+  <body>
+    <main>
+      <header>
+        <div>12:43</div>
+        <i class="fas fa-wifi"></i>
+      </header>
+      <nav>
+        <div class="nav-left">< 156</div>
+        <p>혜준</p>
+        <div></div>
+      </nav>
+      <section class="section">
+        <div class="conversation-left-container">
+          <img src="photo/kakao.jpeg" alt="kakao" class="profile-image" />
+          <div class="speech-bubble">뭐야?!</div>
+        </div>
+        <div class="conversation-right-container">
+          <div class="speech-bubble">뭐야?!</div>
+          <img src="photo/kakao.jpeg" alt="kakao" class="profile-image" />
+        </div>
+        <div class="conversation-left-container">
+          <img src="photo/kakao.jpeg" alt="kakao" class="profile-image" />
+          <div class="speech-bubble">뭐야?!</div>
+        </div>
+        <div class="conversation-right-container">
+          <div class="speech-bubble">뭐야?!</div>
+          <img src="photo/kakao.jpeg" alt="kakao" class="profile-image" />
+        </div>
+      </section>
+      <footer>
+        <div class="footer-left">+</div>
+        <div class="footer-right">
+          <input class="footer-right-icons-container" id="chat-input-value" />
+          <button onclick="input()">확인</button>
+        </div>
+      </footer>
+    </main>
+  </body>
+</html>
