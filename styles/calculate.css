@@ -1,0 +1,35 @@
+main {
+  width: 80%;
+  text-align: center;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+}
+
+.calculate-container {
+  background-color: yellow;
+  width: fit-content;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  margin: 0 auto;
+}
+
+.calculate-number {
+  border: 1px solid black;
+  width: 50px;
+  height: 50px;
+  background-color: white;
+  border-radius: 10px;
+}
+
+.calculate-operator {
+  border: 1px solid black;
+  width: 50px;
+  height: 50px;
+  background-color: skyblue;
+  border-radius: 10px;
+}
+
+.calculate-result {
+  margin: 10px 80px;
+}

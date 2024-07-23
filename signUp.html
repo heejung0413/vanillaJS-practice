@@ -26,9 +26,13 @@
         remove.remove();
       };
 
+      let container = document.createElement("div");
+      container.setAttribute("class", "card-container");
+      container.appendChild(todoItem);
+      container.appendChild(remove);
+
       let saveContainer = document.getElementById("save-container");
-      saveContainer.appendChild(todoItem);
-      saveContainer.appendChild(remove);
+      saveContainer.appendChild(container);
     }
   </script>
   <body>

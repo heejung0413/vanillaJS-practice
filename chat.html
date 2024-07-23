@@ -22,6 +22,16 @@
       let inputValue = document.getElementById("chat-input-value").value;
 
       if (inputValue !== "") {
+        let mainContainer = document.getElementById("mainContainer");
+
+        let toastContainer = document.createElement("div");
+        toastContainer.setAttribute("class", "toast");
+        toastContainer.textContent = "메세지가 추가되었습니다.";
+
+        setTimeout(() => {
+          toastContainer.remove();
+        }, 3000);
+
         //conversation-right-container
         let itemContainer = document.createElement("div");
         itemContainer.setAttribute("class", "conversation-right-container");
@@ -47,8 +57,9 @@
         itemContainer.appendChild(removeButton);
 
         //section
-        let container = document.getElementsByClassName("section")[0];
+        let container = document.getElementsByTagName("section")[0];
         container.appendChild(itemContainer);
+        mainContainer.appendChild(toastContainer);
 
         //reset
         document.getElementById("chat-input-value").value = "";
@@ -56,7 +67,7 @@
     }
   </script>
   <body>
-    <main>
+    <main id="'mainContainer">
       <header>
         <div>12:43</div>
         <i class="fas fa-wifi"></i>

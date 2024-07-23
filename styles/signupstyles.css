@@ -38,6 +38,12 @@
 #save-container {
   height: 20em;
   margin: 10px;
+  background-color: yellow;
+}
+
+.card-container {
+  display: flex;
+  background-color: aqua;
 }
 
 #card-item {

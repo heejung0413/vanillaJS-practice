@@ -128,3 +128,27 @@ footer {
   display: flex;
   justify-items: right;
 }
+
+.toast {
+  background-color: #5ce259;
+  padding: 10px;
+  position: fixed;
+  margin: 10px auto;
+  left: 50vw;
+  border-radius: 10px;
+  box-shadow: 5px 5px 10px #434343;
+  animation: toast-moved 3s linear;
+}
+
+@keyframes toast-moved {
+  from {
+    opacity: 0;
+  }
+  50% {
+    transform: translateY(auto);
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
